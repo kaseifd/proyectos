@@ -1,29 +1,28 @@
 :root {
     --text-color: rgb(67, 67, 67);
+    --text-color-2: rgb(131, 131, 131);
     --links-color: rgb(211, 71, 71);
     --bg-color: white;
     --bg-footer-color: rgb(212, 212, 212);
-
 }
 
 * {
     /* border: 1px solid red; */
     /* margin: 0; */
-    font-family: 'Courier New', Courier, monospace;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 body {
     color: var(--text-color);
-
+    margin: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    gap: 16px;
     align-items: center;
-    border-bottom: 1px solid var(--bg-footer-color);
-    padding: 32px 16px;
+    padding: 32px 28px;
 }
 
 #logo h1 {
@@ -34,7 +33,7 @@ header {
 
 #logo h2 {
     margin: 0;
-    margin-top: 8px;
+    margin-top: 4px;
     font-size: 12px;
     font-weight: 100;
 }
@@ -49,13 +48,13 @@ header {
     padding: 20px;
     margin: 0;
     border-radius: 8px;
+    text-align: center;
+    align-items: center;
 }
 
 #navbar #active {
     color: rgba(255, 255, 255, 0.6);
 }
-
-
 
 /* ============ MAIN ============ */
 
@@ -64,11 +63,207 @@ main {
     margin: 0 auto;
 }
 
-#hero h3{
+/* ---- Sección Hero ---- */
+
+#hero {
+    border-bottom: 1px solid var(--bg-footer-color);
+    border-top: 1px solid var(--bg-footer-color);
+    padding: 32px 0;
+}
+
+#hero h3 {
     text-align: center;
     font-style: italic;
     padding: 0 64px;
     font-weight: normal;
-
+    margin: 0;
+    margin-bottom: 32px;
 }
 
+#hero img {
+    width: 960px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* ---- Sección ---- */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--bg-footer-color);
+    padding-bottom: 32px;
+}
+
+.section-title {
+    background-color: var(--links-color);
+    color: var(--bg-color);
+    padding: 6px 24px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.section-title h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+}
+
+.card-container {
+    display: flex;
+    margin-top: 32px;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: var(--links-color);
+    font-size: 14px;
+}
+
+p {
+    color: var(--text-color-2);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+p span {
+    font-weight: bolder;
+}
+
+/* ---- Sección Services ---- */
+
+#section-services img {
+    width: 32px;
+    height: 32px;
+}
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.card-title h5 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* ---- Sección Players ---- */
+
+.players-img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
+
+#section-players p {
+    margin: 8px 0;
+}
+
+#players-card-container {
+    gap: 16px;
+}
+
+/* ---- Sección Latest work ---- */
+
+.latest-work-img {
+    width: 300px;
+    height: 160px;
+    object-fit: cover;
+}
+
+#section-latest-work {
+    border: none;
+}
+
+/* ============ FOOTER ============ */
+
+footer {
+    background-color: var(--bg-footer-color);
+    padding: 48px 28px 16px 28px;
+}
+
+footer img {
+    width: 95px;
+    height: 95px;
+}
+
+footer p {
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.img-frame {
+    border: 1px solid var(--text-color);
+    padding: 4px;
+    display: flex;
+    text-align: center;
+}
+
+footer h5 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    margin: 0;
+}
+
+#footer-upper-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+#blog-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    
+}
+
+#latest-blog{
+    grid-column: 1/3;
+}
+
+#company-details-section {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#company-details-section p {
+    margin: 0;
+}
+
+#contact {
+    grid-column: 4;
+}
+
+.blog-entry {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.blog-entry-title {
+    color: var(--links-color);
+    margin: 0;
+    font-size: 16px;
+}
+
+#copyright {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--text-color-2);
+    margin-top: 44px;
+}
